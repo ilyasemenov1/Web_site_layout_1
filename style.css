@@ -25,7 +25,7 @@ body {
     grid-template-rows: min-content 1fr;
     grid-row-gap: 50px;
 }
-.product__about {
+.product__list {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto-fit, min-content);
@@ -33,7 +33,7 @@ body {
     margin: 0;
     padding: 0;
 }
-.product__about li{
+.product__list-items{
     position: relative;
     display: flex;
     flex-direction: row;
@@ -45,7 +45,7 @@ body {
     text-shadow: 0px 1px 0px rgba(0,0,0,0.3);
     color: #ffffff;
 }
-.product__about li::before {
+.product__list-items::before {
     position: relative;
     content: url("images/check_icon_349.png");
     top: 5px;
@@ -400,13 +400,23 @@ body {
     color: #445161;
     transition: .3s ease;
 }
-.card__buy:hover {
+.active-element:hover {
+    cursor: pointer;
     transform: translateY(-3px);
     background: #ffffff;
     box-shadow: 0px 0px 13px #c7c7c7;
 }
-.card__buy:focus {
+.active-element:focus {
+    cursor: pointer;
     transform: translateY(-3px);
+    background: #ffffff;
+    box-shadow: 0px 0px 13px #c7c7c7;
+}
+.active-element-form:hover {
+    background: #ffffff;
+    box-shadow: 0px 0px 13px #c7c7c7;
+}
+.active-element-form:focus {
     background: #ffffff;
     box-shadow: 0px 0px 13px #c7c7c7;
 }
@@ -447,6 +457,7 @@ body {
     min-height: 40px;
     padding: 10px;
     border-radius: 5px;
+    transition: .2s ease;
 }
 .about-form__input-conteiner input {
     display: inline-flex;
@@ -480,6 +491,7 @@ body {
     min-height: 170px;
     padding: 10px;
     border-radius: 5px;
+    transition: .2s ease;
 }
 .about-form__textaria-conteiner textarea {
     border: none;
@@ -491,6 +503,76 @@ body {
     font-weight: 400;
     color: #445162;
 } 
+.about-form__send-button-conteiner {
+    display: flex;
+    justify-content: center;
+}
+.about-form__send-button {
+    background: #ffffff;
+    min-width: 140px;
+    width: min-content;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    color: #445162;
+    transition: .3s ease;   
+}
+.contacts__icons {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+}
+.contacts__icons li:nth-child(-n+4)  {
+    position: relative;
+    left: 30px;
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #ffffff;
+}
+.contacts__icons li:nth-child(-n+4)::before {
+    position: absolute;
+    content: "";
+    top: -1px;
+    left: -30px;
+    width: 26px;
+    height: 26px;
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #ffffff;
+}
+.contacts__icons li:nth-child(1)::before {
+    content: "";
+    background-image: url("images/skype_icon_319.png");
+    background-repeat: no-repeat;
+}
+.contacts__icons li:nth-child(2)::before {
+    content: "";
+    background-image: url("images/icq_icon_324.png");
+    background-repeat: no-repeat;
+}
+.contacts__icons li:nth-child(3)::before {
+    content: "";
+    background-image: url("images/email_icon_332.png");
+    background-repeat: no-repeat;
+}
+.contacts__icons li:nth-child(4)::before {
+    content: "";
+    background-image: url("images/phone_icon_337.png");
+    background-repeat: no-repeat;
+}
 @media(max-width: 1280px) {
     .buy {
         padding: 50px 20% 50px 20%; 
