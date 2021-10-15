@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+.section-box-padding {
+    padding: 50px;
+}
 body {
     display: flex;
     justify-content: center;
@@ -18,7 +21,6 @@ body {
     display: grid;
     grid-template-columns: 1fr min-content;
     background: #445162;
-    padding: 50px;
 }
 .product__about-conteiner {
     display: grid;
@@ -70,7 +72,6 @@ body {
     display: grid;
     grid-template-columns: 1fr min-content;
     grid-column-gap: 30px;
-    padding: 50px;
 }
 .product-description__contener {
     display: grid;
@@ -167,7 +168,6 @@ body {
     grid-template-rows: min-content 1fr;
     grid-row-gap: 35px;
     background: #ffffff;
-    padding: 50px 50px 50px 50px;
 }
 .scrinshots h2 {
     display: inline-flex;
@@ -225,7 +225,6 @@ body {
     grid-template-rows: min-content 1fr;
     grid-row-gap: 35px;
     background: #f5f5f5;
-    padding: 50px 
 }
 .reviews__label {
     display: inline-flex;
@@ -534,11 +533,6 @@ body {
 .contacts__icons li:nth-child(-n+4)  {
     position: relative;
     left: 30px;
-    font-family: Arial;
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 400;
-    color: #ffffff;
 }
 .contacts__icons li:nth-child(-n+4)::before {
     position: absolute;
@@ -572,6 +566,30 @@ body {
     content: "";
     background-image: url("images/phone_icon_337.png");
     background-repeat: no-repeat;
+}
+.contacts__link {
+    text-decoration: none;
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #ffffff;
+}
+.contacts__link:hover {
+    text-decoration: underline;
+}
+.footer {
+    display: flex;
+    justify-content: center;;
+    background: #ffffff;
+    padding: 10px 0 7px 0;
+}
+.footer__content {
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 500;
+    color: #445161;
 }
 @media(max-width: 1280px) {
     .buy {
